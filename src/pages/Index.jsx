@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Button, Box, Text, StackDivider } from "@chakra-ui/react";
+import { Container, VStack, HStack, Button, Box, Text, StackDivider, Image } from "@chakra-ui/react";
 
 const jobs = [
   { id: 1, title: "Frontend Developer", category: "Engineering" },
@@ -17,7 +17,9 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" py={10}>
       <VStack spacing={4} width="100%">
+        <Image src="/images/job-board-banner.jpg" alt="Job Board Banner" borderRadius="lg" mb={4} />
         <Text fontSize="3xl" fontWeight="bold">Remote Tech Jobs</Text>
+        <Text fontSize="lg" color="gray.600" mb={4}>Find your next remote job in tech. Filter by category to find the perfect match for your skills.</Text>
         <HStack spacing={4}>
           <Button onClick={() => setFilter("All")} colorScheme={filter === "All" ? "blue" : "gray"}>All</Button>
           <Button onClick={() => setFilter("Product")} colorScheme={filter === "Product" ? "blue" : "gray"}>Product</Button>
